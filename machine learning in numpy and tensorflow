@@ -1,0 +1,29 @@
+import numpy as np
+import tensorflow as tf
+
+# Data latihan (fitur dan label)
+X_train = np.array([[1, 1, 1], [2, 2, 2], [3, 3, 3], [4, 4, 4], [5, 5, 5]])
+y_train = np.array([1, 1, 0, 0, 0])  # 1 = bagus, 0 = tidak bagus
+
+# Membuat model
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(1, input_shape=(3,), activation='sigmoid')
+])
+
+# Kompilasi model
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Melatih model
+model.fit(X_train, y_train, epochs=1000, verbose=0)  # 1000 epochs untuk contoh
+
+# Data karyawan baru
+data_karyawan_baru = np.array([[2, 3, 2]])  # Contoh data
+
+# Prediksi
+prediksi = model.predict(data_karyawan_baru)
+
+# Interpretasi prediksi
+if prediksi > 0.5:
+    print("Kinerja bagus")
+else:
+    print("Kinerja tidak bagus")
