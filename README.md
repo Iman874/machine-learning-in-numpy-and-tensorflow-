@@ -7,7 +7,8 @@ Tiny machine learning in numpy and machine learning
 
 numpy (sebagai np): Digunakan untuk operasi numerik, terutama array (seperti data fitur dan label).
 tensorflow (sebagai tf): Framework deep learning untuk membangun dan melatih model neural network.
-Data Latihan:
+
+## Data Latihan:
 
 X_train: Array numpy berisi fitur karyawan (misalnya, pengalaman, skill, penilaian). Setiap baris mewakili satu karyawan, dan setiap kolom mewakili satu fitur.
 y_train: Array numpy berisi label kinerja karyawan (1 untuk "bagus", 0 untuk "tidak bagus").
